@@ -1,0 +1,103 @@
+@media screen and (min-width:700px){
+    .menubar{
+        display: none;
+    }
+    .navigation{
+        flex-direction: row;
+    }
+    .navlist{
+        display: flex;
+        gap: 20px;
+    }
+    .intro{
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 20px;
+        padding: 100px;
+        align-items: center;
+    }
+    .intro_img_div{
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+    }
+    .intro_img{
+        width: 300px;
+        height: 300px;
+        border-radius: 300px;
+    }
+    .about{
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 100px;
+        padding-bottom: 100px;
+        gap: 30px;
+    }
+    .about h1{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    .skill{
+        width: 150px;
+        height: 150px;
+    }
+    .skill_img{
+        width: 90px;
+        height: 90px;
+        padding: 30px;
+    }
+    
+}
+@media  screen and (min-width:1000px) {
+    
+    .intro{
+        padding: 150px;
+    }
+    .intro_desc{
+        width: fit-content;
+        height: 100px;
+        letter-spacing: 2px;
+        line-height: 25px;
+        font-size: larger;
+    }
+    .about_img{
+        width: 400px;
+        height: 500px;
+    }
+    .about_text{
+        width: 400px;
+        letter-spacing: 2px;
+        line-height: 31px;
+        font-size: larger;
+    }
+    .skill{
+        width: 300px;
+        height: 300px;
+    }
+    .skills{
+        gap:100px;
+    }
+    .skill_img{
+        width: 180px;
+        height: 180px;
+        padding: 60px;
+    }
+    .resume{
+        padding: 50px;
+    }
+    .contact input{
+        height: 50px;
+    }
+    .contact textarea{
+        height: 100px;
+    }
+    .contact button{
+        width: 400px;
+    }
+    .contact_img{
+        width: 50px;
+        height: 50px;
+    }
+}
