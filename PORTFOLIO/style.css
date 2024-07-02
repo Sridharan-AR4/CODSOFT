@@ -4,8 +4,15 @@
     scroll-behavior: smooth;
 }
 body{
-    background-color: rgb(230, 117, 185);
+    background-color: darkgrey;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color: rgb(136, 136, 136);
+    
 }
 .navigation{
     display: flex;
@@ -13,13 +20,13 @@ body{
     justify-content: space-between;
     padding: 5px;
 }
+.navlist{
+    display: none;
+}
 .navlist a li{
     list-style: none;
     font-size: 1rem;
     padding: 5px;
-}
-.navlist{
-    display: none;
 }
 a:hover{
     cursor: pointer;
@@ -36,7 +43,7 @@ a{
 .menubar{
     width: 30px;
     height: 30px;
-    position: absolute;
+    position:absolute;
     top: 7px;
     right: 5px;
     cursor: pointer;
@@ -91,11 +98,14 @@ a{
     margin-bottom: 20px;
 }
 .about{
+    background-color: lightgray;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+}
+.about h1{
+    margin-top: 20px;
 }
 .about_img{
     width: 300px;
@@ -121,18 +131,116 @@ a{
     text-align: center;
 }
 .skill{
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: white;
 }
 .skill_img{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     padding: 20px;
 }
 .projects{
+    background-color: lightgray;
     display: flex;
-    margin: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.projects h1{
+    margin-top: 20px;
+}
+.resume{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.resume h1{
+    margin-top: 20px;
+    text-align: center;
+}
+.download_res{
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 25px;
+    box-shadow: 10px lightgray;
+    margin-bottom: 20px;
+
+}
+.contact{
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.contact div{
+   width: 80%;
+}
+.contact_form input{
+    width: 40%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid black;
+    padding: 2px;
+}
+.contact_form textarea{
+    width:82%;
+    background: transparent;
+    padding: 2px;
+}
+.contact_form button{
+    width: 40%;
+    background: transparent;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+.contact_form button:hover{
+    color: white;
+}
+.contact_form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:10px;
+}
+.contact_form input:focus{
+    border: 1px solid black;
+    border-radius: 25px;
+    outline: none;
+}
+.contact_form textarea:focus{
+    border: 1px solid black;
+    outline: none;
+}
+.contact_links{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.contact_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+.contact_img:hover{
+    transform: scale(1.1);
+}
+.footer{
+    background-color: darkgray;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.footer h4:hover{
+    color: white;
 }
