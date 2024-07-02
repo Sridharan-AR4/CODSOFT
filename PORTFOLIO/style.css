@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(230, 117, 185);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+}
+.navlist a li{
+    list-style: none;
+    font-size: 1rem;
+    padding: 5px;
+}
+.navlist{
+    display: none;
+}
+a:hover{
+    cursor: pointer;
+    color: whitesmoke;
+}
+a{
+    text-decoration: none;
+    color: initial; 
+}
+
+.headingtext{
+    font-size: 2rem;
+}
+.menubar{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    cursor: pointer;
+}
+.showhide{
+    display: block;
+}
+.intro{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.intro_img{
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    align-self: center;
+    animation-name: float;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes float {
+    0%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translateY(-1.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.intro_text{
+    /* margin-left: 5px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* font-size: 1.2rem; */
+}
+.myname{
+    background: linear-gradient(rgb(0, 183, 255),rgb(254, 1, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro_desc{
+    font-weight: 500;
+    width: 300px;
+    margin-bottom: 20px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
+.about_img{
+    width: 300px;
+    height: 300px;
+    border: 3px solid gold;
+   
+}
+.about_text{
+    width: 300px;
+    margin-bottom: 20px;
+}
+.skills{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 30px;
+    gap: 55px;
+}
+.skills h1{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.skill{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+}
+.skill_img{
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+}
+.projects{
+    display: flex;
+    margin: 30px 20px;
+    justify-content: center;
+}
