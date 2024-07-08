@@ -1,4 +1,11 @@
 @media screen and (min-width:700px){
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
     .menubar{
         display: none;
     }
@@ -27,6 +34,7 @@
         border-radius: 300px;
     }
     .about{
+        padding-top: 40px;
         flex-direction: row-reverse;
         flex-wrap: wrap;
         justify-content: center;
@@ -51,16 +59,46 @@
     
 }
 @media  screen and (min-width:1000px) {
-    
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+    }
+    .header h1{
+        margin-left: 5px;
+        font-size: 35px;
+    }
+    .header li{
+        font-size: xx-large;
+    }
     .intro{
         padding: 150px;
+        
+    }
+    .intro_img_div{
+        width: 350px;
+        height: 350px;
+    }
+    .intro_img{
+        width: 350px;
+        height: 350px;
+    }
+    .intro_text h3,h1{
+        font-size: xx-large;
     }
     .intro_desc{
         width: fit-content;
-        height: 100px;
+        height: fit-content;
         letter-spacing: 2px;
-        line-height: 25px;
-        font-size: larger;
+        line-height: 35px;
+        font-size: 30px;
+        word-spacing: 20px;
+        gap: 40px;
+    }
+    .about{
+        padding-top: 40px;
     }
     .about_img{
         width: 400px;
@@ -73,18 +111,32 @@
         font-size: larger;
     }
     .skill{
-        width: 300px;
-        height: 300px;
+        width: 275px;
+        height: 275px;
+        margin-right: 50px;
     }
-    .skills{
-        gap:100px;
-    }
+    
     .skill_img{
-        width: 180px;
-        height: 180px;
+        width: 155px;
+        height: 155px;
         padding: 60px;
     }
+    .projects{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+    .projects h1{
+        width: 100%;
+        text-align: center;
+    }
+    .project1{
+        width: 40%;
+    }
     .resume{
+        padding-top: 40px;
         padding: 50px;
     }
     .contact input{
