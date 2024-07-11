@@ -8,11 +8,26 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .header{
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0px;
     z-index: 100;
-    background-color: rgb(136, 136, 136);
-    
+    background-color: darkgray;
+    /* background-color:lightgray; */
+    /* animation-name: colorchange; */
+    /* animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+@keyframes colorchange {
+    from{
+        background-color: darkgray;
+    }
+    to{
+        background-color: lightgray;
+    }
+
 }
 .navigation{
     display: flex;
@@ -25,12 +40,12 @@ body{
 }
 .navlist a li{
     list-style: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 5px;
 }
 a:hover{
     cursor: pointer;
-    color: whitesmoke;
+    color:whitesmoke;
 }
 a{
     text-decoration: none;
@@ -38,7 +53,9 @@ a{
 }
 
 .headingtext{
-    font-size: 2rem;
+    display: inline;
+    font-size: 2.2rem;
+    
 }
 .menubar{
     width: 30px;
@@ -62,6 +79,7 @@ a{
     width: 300px;
     height: 300px;
     border-radius: 300px;
+    margin-top: 60px;
 }
 .intro_img{
     width: 300px;
@@ -98,16 +116,23 @@ a{
 }
 
 .myname{
-    background: linear-gradient(rgb(0, 183, 255),rgb(254, 1, 1));
+    background: url(images/star.gif);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    font-size: xx-large;
+    /* background: linear-gradient(rgb(0, 183, 255),rgb(254, 1, 1));
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
 }
 .intro_desc{
     font-weight: 500;
     width: 300px;
     margin-bottom: 20px;
 }
+
 .about{
     padding-top: 40px;
     background-color: lightgray;
@@ -123,11 +148,14 @@ a{
     width: 300px;
     height: 300px;
     border: 3px solid gold;
+    border-radius: 10px;
     
 }
 .about_text{
     width: 300px;
     margin-bottom: 20px;
+    word-spacing: 5px;
+    line-height: 25px;
 }
 .skills{
     padding-top: 60px;
@@ -147,11 +175,31 @@ a{
     height: 100px;
     border-radius: 50%;
     background-color: white;
+    animation: rotate 4s linear 0s infinite normal;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(1deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
 }
 .skill_img{
     width: 60px;
     height: 60px;
     padding: 20px;
+    background: transparent;
 }
 .projects{
     padding: 40px;
@@ -220,12 +268,18 @@ a{
     border-radius: 25px;
     box-shadow: 10px lightgray;
     margin-bottom: 20px;
-    
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+.download_res:hover{
+    background-color: rgb(160, 255, 113);
+    color: black;
 }
 .contact{
     padding-top: 40px;
     background-color: lightgray;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -245,20 +299,24 @@ a{
     padding: 5px;
 }
 .contact_form textarea{
-    width:86%;
+    width:89%;
     background: transparent;
     padding: 2px;
     height: 80px;
 }
 .contact_form button{
     width: 40%;
-    background: transparent;
+    background: darkgrey;
     border-radius: 25px;
     padding: 10px;
+    border: none;
     cursor: pointer;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 .contact_form button:hover{
-    color: white;
+    background-color: rgb(160, 255, 113);
+    color: black;
 }
 .contact_form{
     display: flex;
@@ -280,15 +338,26 @@ a{
     justify-content: center;
     gap: 20px;
 }
+.contact_ovrlay{
+    display: none;
+    position: absolute;
+    background-color: darkgray;
+    width: 100vw;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    z-index: 100px;
+}
 .contact_img{
     width: 40px;
     height: 40px;
     border-radius: 25px;
     background: transparent;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 .contact_img:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .footer{
     background-color: darkgray;
@@ -301,6 +370,15 @@ a{
 .footer h4:hover{
     color: white;
 }
+.txt_dec{
+    display: inline-block;
+    width: fit-content;
+    background: url("images/giphy.gif");
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+}
 @keyframes  ani1 {
     from{
         transform: translateX(-1000px);
@@ -309,4 +387,13 @@ a{
         transform: translateX(0);
     }
     
+}
+a:visited{
+    color: initial;
+}
+a:hover{
+    color: white;
+}
+button:hover{
+    color: rgb(90, 186, 90);
 }
