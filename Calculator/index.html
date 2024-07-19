@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <h1 class="title">CALCI</h1>
+        <ul>
+            <a href="https://www.linkedin.com/in/sridharan-a-714611258/"><li>Linkedin</li></a>
+            <a href="contact.html"> <li>Contact Me</li></a>
+            <li>About Me</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="quote">
+            <h2 style="display: inline-block; padding: 10px;">Numbers are the universal language</h2>
+        </div>
+        <div class="calci">
+
+            <input type="text" placeholder="0" class="screen" id="display">
+            <table class="tb">
+                <tr class="sc">
+                    <td class="cell"><button class="btn" onclick="Clear()"> C </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('/')"> / </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('*')"> x </button></td>
+                    <td class="cell"><button class="btn" onclick="d()"> DEL </button></td>
+                </tr>
+                <tr class="sc">
+                    <td class="cell"><button class="btn" onclick="dis('7')"> 7 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('8')"> 8 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('9')"> 9 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('-')"> - </button></td>
+                </tr>
+                <tr class="sc">
+                    <td class="cell"><button class="btn" onclick="dis('4')"> 4 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('5')"> 5 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('6')"> 6 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('+')"> + </button></td>
+                </tr>
+                <tr class="sc">
+                    <td class="cell"><button class="btn" onclick="dis('1')"> 1 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('2')"> 2 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('3')"> 3 </button></td>
+                    <td class="cell" rowspan="2"><button class="btn" onclick="calculate()">= </button></td>
+                </tr>
+                <tr class="sc">
+                    <td class="cell"><button class="btn" onclick="dis('%')"> % </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('0')"> 0 </button></td>
+                    <td class="cell"><button class="btn" onclick="dis('.')"> . </button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        let outputscreen = document.getElementById("display");
+        console.log(outputscreen);
+        function dis(num) {
+            outputscreen.value += num;
+        }
+        function calculate(){
+            try{
+                outputscreen.value=eval(outputscreen.value);
+            }
+            catch(e){
+                outputscreen.value="Invalid Input";
+                
+            }
+        }
+        function Clear(){
+            outputscreen.value="";
+        }
+        function d(){
+            if(outputscreen.value=="Infinity" || outputscreen.value=="NaN" ||outputscreen.value=="Invalid Input"){
+                outputscreen.value="";
+            }
+            outputscreen.value=outputscreen.value.slice(0,-1);
+        }
+    </script>
+</body>
+
+</html>

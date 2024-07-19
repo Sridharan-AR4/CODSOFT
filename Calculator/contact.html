@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="cont.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(173, 219, 106);
+        }
+
+        div {
+            margin-top: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            background-color: rgb(173, 219, 106);
+            width: auto;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        P {
+            display: inline;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: none;
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+        a:hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">
+        <h1>HOME</h1>
+    </a>
+    <div>
+        <h1>Get In Touch</h1>
+        <form action="thankyou.html">
+            <p>Tell Your Name: &nbsp;</p>
+            <input type="text" required placeholder="Enter your name"><br><br>
+            <p>Enter your email:</p>
+            <input type="email" required placeholder="Enter youyr email"><br><br>
+            <p>Your Linkedin ID</p>
+            <input type="url" placeholder="http://"><br><br>
+            <p style="display: flex;align-items: center;">
+                Message&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <br>
+            <textarea minlength="100" maxlength="250" required style="width: 185px; height: 100px;"></textarea><br>
+            <input type="submit" style="border-radius: 15px; ">
+        </form>
+    </div>
+</body>
+
+</html>
